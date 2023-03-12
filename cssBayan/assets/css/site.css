@@ -1,6 +1,8 @@
 body {
-    background: blanchedalmond;
+    background: #fffec6;
     padding: 0 1em 1em;
+    font: bold;
+    color: #09122e;
   }
 
   input {
@@ -12,24 +14,29 @@ h1 {
   margin: 0;
   line-height: 2;
   text-align: center;
+  color: #09122e;
 }
-h2 {
-  margin: 0 0 .5em;
-  font-weight: normal;
-}
+
 input {
   position: absolute;
   opacity: 0;
   z-index: -1;
 }
 
+.app-container
+{
+    padding: 50px 130px;
+}
+
+
 .tabs {
   overflow: hidden;
 }
 .tab {
   width: 100%;
-  color: blue;
+  color: #b4dba0;
   overflow: hidden;
+  border-bottom: solid darkkhaki;
 }
   .tab label {
     display: flex;
@@ -43,6 +50,11 @@ input {
         content: "\002B";
     }
 
+    .tabs:hover .tab-label
+    {
+        color: #09122e;
+    }
+
     .tab label::after {
       width: 1em;
       height: 1em;
@@ -53,8 +65,8 @@ input {
   .tab-content {
     max-height: 0;
     padding: 0 1em;
-    color: blanchedalmond;
-    background: white;
+    display: flex;
+    justify-content: center;
     transition: all .35s;
   }
 
@@ -66,9 +78,26 @@ input {
         content: "\2613"!important;
     }
 
+    input:checked ~ .tab-label
+    {
+        color: #09122e !important;
+    }
+
+
   input:checked ~ .tab-content {
     max-height: 100vh;
     padding: 1em;
+  }
+
+  img
+  {
+    width: 400px;
+    height: 350px;
+  }
+
+  .header
+  {
+    border-bottom: solid darkkhaki;
   }
 
 
