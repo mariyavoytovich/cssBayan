@@ -10,6 +10,7 @@ body {
     opacity: 0;
     z-index: -1;
   }
+  
 h1 {
   margin: 0;
   line-height: 2;
@@ -25,7 +26,16 @@ input {
 
 .app-container
 {
-    padding: 50px 130px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tabs-overview
+{
+    padding: 10px 40px;
+    width: 80%;
 }
 
 .tabs {
@@ -76,7 +86,8 @@ input {
   }
 
   .tabs:hover input:checked ~ .tab-label::after {
-        content: "\2613"!important;
+        content: "\002B"!important;
+        transform: rotate(45deg);
     }
 
     input:checked ~ .tab-label
@@ -101,11 +112,13 @@ input {
 
   img
   {
-    width: 400px;
-    height: 350px;
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 350px;
   }
 
-  .header
+  .tabs-header
   {
     border-bottom: solid darkkhaki;
   }
