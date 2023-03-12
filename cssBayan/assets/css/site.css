@@ -1,0 +1,124 @@
+body {
+    background: #fffec6;
+    padding: 0 1em 1em;
+    font: bold;
+    color: #09122e;
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+  
+h1 {
+  margin: 0;
+  line-height: 2;
+  text-align: center;
+  color: #09122e;
+}
+
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.app-container
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tabs-overview
+{
+    padding: 3% 15%;
+    width: 80%;
+}
+
+.tabs {
+  overflow: hidden;
+}
+
+.tab {
+  width: 100%;
+  color: #b4dba0;
+  overflow: hidden;
+  border-bottom: solid darkkhaki;
+}
+
+  .tab label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    font-weight: bold;
+    cursor: pointer;
+  }
+    .tabs:hover .tab label::after
+    {
+        content: "\002B";
+    }
+
+    .tabs:hover .tab-label
+    {
+        color: #09122e;
+    }
+
+    .tab label::after {
+      width: 1em;
+      height: 1em;
+      text-align: center;
+      transition: all .35s;
+    }
+  
+  .tab-content {
+    max-height: 0;
+    padding: 0 1em;
+    display: flex;
+    justify-content: center;
+    transition: 0.55s opacity, 0.55s visibility;;
+  }
+
+  .tab-label {
+    background: darken(blanchedalmond, 10%);
+  }
+
+  .tabs:hover input:checked ~ .tab-label::after {
+        content: "\002B"!important;
+        transform: rotate(45deg);
+    }
+
+    input:checked ~ .tab-label
+    {
+        color: #09122e !important;
+    }
+
+.tab:hover .tab-content {
+    max-height: 100vh;
+    padding: 1em;
+  }
+
+  .tab label:hover ~ .tab-label {
+    max-height: 100vh;
+    padding: 1em;
+  }
+
+  input:checked ~ .tab-content {
+    max-height: 100vh;
+    padding: 1em;
+  }
+
+  img
+  {
+    width: 100%;
+    height: 100%;
+  }
+
+  .tabs-header
+  {
+    border-bottom: solid darkkhaki;
+  }
+
+
