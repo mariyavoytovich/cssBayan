@@ -28,16 +28,17 @@ input {
     padding: 50px 130px;
 }
 
-
 .tabs {
   overflow: hidden;
 }
+
 .tab {
   width: 100%;
   color: #b4dba0;
   overflow: hidden;
   border-bottom: solid darkkhaki;
 }
+
   .tab label {
     display: flex;
     justify-content: space-between;
@@ -67,7 +68,7 @@ input {
     padding: 0 1em;
     display: flex;
     justify-content: center;
-    transition: all .35s;
+    transition: 0.55s opacity, 0.55s visibility;;
   }
 
   .tab-label {
@@ -83,6 +84,15 @@ input {
         color: #09122e !important;
     }
 
+.tab:hover .tab-content {
+    max-height: 100vh;
+    padding: 1em;
+  }
+
+  .tab label:hover ~ .tab-label {
+    max-height: 100vh;
+    padding: 1em;
+  }
 
   input:checked ~ .tab-content {
     max-height: 100vh;
